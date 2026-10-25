@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>補機一覧 | パニグレ非公式Wiki</title>
+<meta name="description" content="「パニシング:グレイレイヴン」の補機一覧。属性別に掲載。">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; color: #222; background: #fff; line-height: 1.7; }
+  header { background: #1f2430; color: #fff; padding: 14px 20px; }
+  header .site-name { font-size: 20px; font-weight: 700; }
+  header .site-name a { color: #fff; text-decoration: none; }
+  header .tagline { font-size: 12px; color: #c8cdd8; }
+  .layout { display: flex; align-items: flex-start; max-width: 1080px; margin: 0 auto; }
+  nav.sidebar { width: 200px; flex: 0 0 200px; padding: 20px 12px; border-right: 1px solid #e3e6ec; position: sticky; top: 0; }
+  nav.sidebar h2 { font-size: 13px; color: #666; margin: 0 0 8px; }
+  nav.sidebar ul { list-style: none; margin: 0; padding: 0; }
+  nav.sidebar li { margin: 4px 0; }
+  nav.sidebar a { display: block; padding: 6px 10px; color: #1f4fa3; text-decoration: none; border-radius: 6px; }
+  nav.sidebar a:hover { background: #eef3fc; text-decoration: underline; }
+  nav.sidebar a.current { background: #eef3fc; font-weight: 700; }
+  main { flex: 1; padding: 20px 24px; min-width: 0; }
+  main h1 { font-size: 22px; margin: 0 0 12px; }
+  main h2 { font-size: 18px; margin: 28px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #1f2430; }
+  main h3 { font-size: 15px; margin: 18px 0 6px; }
+  .index { background: #f6f7f9; border: 1px solid #e3e6ec; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin: 0 0 8px; position: sticky; top: 8px; z-index: 5; }
+  .idx-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+  .idx-label { font-weight: 700; margin-right: 2px; }
+  .index a { display: inline-block; background: #fff; border: 1px solid #d4d9e2; border-radius: 999px; padding: 2px 10px; color: #1f4fa3; text-decoration: none; }
+  .index a:hover { background: #eef3fc; }
+  .row { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 10px; margin: 0 0 6px; }
+  .card { flex: 0 0 calc((100% - 24px) / 4); scroll-snap-align: start; display: block; border: 1px solid #e3e6ec; border-radius: 8px; padding: 10px 6px; text-align: center; text-decoration: none; background: #fff; }
+  .card:hover { background: #eef3fc; border-color: #c9d6f2; }
+  .img-ph { width: 72px; height: 72px; margin: 0 auto 6px; background: #eef0f4; border: 1px dashed #c3c9d4; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #8a93a5; }
+  .card .name { color: #1f4fa3; font-size: 14px; }
+  .ph-note { font-size: 12px; color: #888; }
+  footer { border-top: 1px solid #e3e6ec; padding: 14px 20px; font-size: 12px; color: #666; text-align: center; }
+  @media (max-width: 640px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { width: 100%; flex: none; border-right: none; border-bottom: 1px solid #e3e6ec; position: static; }
+    .card { flex-basis: calc((100% - 16px) / 3); }
+    .img-ph { width: 48px; height: 48px; }
+  }
+
+  .index { display: flex; gap: 12px; align-items: flex-start; }
+  .idx-links { flex: 1; min-width: 0; }
+  .menu { position: relative; flex: 0 0 auto; }
+  .menu summary { list-style: none; cursor: pointer; background: #fff; border: 1px solid #d4d9e2; border-radius: 8px; padding: 12px 6px; font-weight: 700; color: #1f2430; white-space: nowrap; writing-mode: vertical-rl; letter-spacing: .2em; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu .panel { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: #fff; border: 1px solid #e3e6ec; border-radius: 8px; box-shadow: 0 10px 28px rgba(15, 23, 42, .16); padding: 6px; z-index: 20; }
+  .menu[open] .panel { animation: menu-pop .15s ease-out; }
+  .menu .panel a { display: block; padding: 7px 10px; border-radius: 6px; color: #1f4fa3; text-decoration: none; }
+  .menu .panel a:hover { background: #eef3fc; }
+  .menu .panel a.current { font-weight: 700; background: #eef3fc; }
+  @keyframes menu-pop { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+<header>
+  <div class="site-name"><a href="index.html">パニグレ非公式Wiki</a></div>
+  <div class="tagline">非公式です</div>
+</header>
+<div class="layout">
+  <main>
+    <h1>補機一覧</h1>
+    <p class="ph-note">※形だけの試作です。画像と補機名は後から入れます。各分類は横にスライドできます。</p>
+    <div class="index">
+      <details class="menu">
+        <summary aria-label="ページ一覧を開く">☰ ページ一覧</summary>
+        <div class="panel">
+          <a href="index.html">トップページ</a>
+          <a href="frames.html">機体一覧</a>
+          <a href="weapons.html">武器一覧</a>
+          <a href="memories.html">意識一覧</a>
+          <a href="cubs.html" class="current">補機一覧</a>
+        </div>
+      </details>
+      <div class="idx-links">
+      <div class="idx-row"><span class="idx-label">属性別</span><a href="#attr-physical">物理</a><a href="#attr-fire">火</a><a href="#attr-ice">氷</a><a href="#attr-lightning">雷</a><a href="#attr-dark">闇</a><a href="#attr-nihil">空</a></div>
+      </div>
+    </div>
+
+    <h2>属性別</h2>
+
+    <h3 id="attr-physical">物理</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+
+    <h3 id="attr-fire">火</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+
+    <h3 id="attr-ice">氷</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+
+    <h3 id="attr-lightning">雷</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+
+    <h3 id="attr-dark">闇</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+
+    <h3 id="attr-nihil">空</h3>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（補機名）</span></a>
+    </div>
+  </main>
+</div>
+<footer>パニグレ非公式Wiki</footer>
+</body>
+</html>
