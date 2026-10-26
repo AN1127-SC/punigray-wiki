@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ルシア・紅蓮 | パニグレ非公式Wiki</title>
+<meta name="description" content="ルシア・紅蓮（BPL-01）の機体情報・推奨編成・スキルの詳細ページ。">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif; color: #222; background: #fff; line-height: 1.7; }
+  header { background: #1f2430; color: #fff; padding: 14px 20px; }
+  header .site-name { font-size: 20px; font-weight: 700; }
+  header .site-name a { color: #fff; text-decoration: none; }
+  header .tagline { font-size: 12px; color: #c8cdd8; }
+  .layout { max-width: 1080px; margin: 0 auto; }
+  main { padding: 20px 24px; min-width: 0; }
+  main h1 { font-size: 22px; margin: 0 0 12px; }
+  main h2 { font-size: 18px; margin: 28px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #1f2430; }
+  main h3 { font-size: 15px; margin: 18px 0 6px; }
+  .index { background: #f6f7f9; border: 1px solid #e3e6ec; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin: 0 0 8px; position: sticky; top: 8px; z-index: 5; display: flex; gap: 12px; align-items: flex-start; }
+  .idx-links { flex: 1; min-width: 0; }
+  .idx-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+  .idx-label { font-weight: 700; margin-right: 2px; }
+  .index a { display: inline-block; background: #fff; border: 1px solid #d4d9e2; border-radius: 999px; padding: 2px 10px; color: #1f4fa3; text-decoration: none; }
+  .index a:hover { background: #eef3fc; }
+  .menu { position: relative; flex: 0 0 auto; }
+  .menu summary { list-style: none; cursor: pointer; background: #fff; border: 1px solid #d4d9e2; border-radius: 8px; padding: 12px 6px; font-weight: 700; color: #1f2430; white-space: nowrap; writing-mode: vertical-rl; letter-spacing: .2em; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu .panel { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: #fff; border: 1px solid #e3e6ec; border-radius: 8px; box-shadow: 0 10px 28px rgba(15, 23, 42, .16); padding: 6px; z-index: 20; }
+  .menu[open] .panel { animation: menu-pop .15s ease-out; }
+  .menu .panel a { display: block; padding: 7px 10px; border-radius: 6px; color: #1f4fa3; text-decoration: none; }
+  .menu .panel a:hover { background: #eef3fc; }
+  @keyframes menu-pop { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 0 0 10px; }
+  th, td { border: 1px solid #e3e6ec; padding: 8px 10px; text-align: left; vertical-align: top; overflow-wrap: break-word; }
+  th { background: #f6f7f9; width: 130px; }
+  .profile-wrap { display: flex; gap: 16px; align-items: flex-start; }
+  .profile-wrap table { flex: 1; min-width: 0; }
+  .profile-table th { width: 84px; }
+  .build-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 10px; }
+  .build-card { border: 1px solid #e3e6ec; border-radius: 8px; padding: 10px 12px 2px; }
+  .build-card h3 { margin: 0 0 6px; }
+  .build-scene { font-size: 12px; font-weight: 400; color: #666; margin-left: 8px; }
+  .build-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .expand-btn { flex: 0 0 auto; cursor: pointer; background: #fff; border: 1px solid #d4d9e2; border-radius: 999px; padding: 2px 12px; font-size: 12px; color: #1f4fa3; }
+  .expand-btn:hover { background: #eef3fc; }
+  .overlay[hidden] { display: none; }
+  .overlay { position: fixed; inset: 0; z-index: 50; }
+  .overlay-backdrop { position: absolute; inset: 0; background: rgba(15, 23, 42, .55); }
+  .overlay-panel { position: relative; max-width: 920px; margin: 4vh auto; background: #fff; border-radius: 10px; padding: 14px 18px 18px; max-height: 92vh; overflow: auto; }
+  .overlay-close { display: block; margin: 0 0 8px auto; cursor: pointer; background: #fff; border: 1px solid #d4d9e2; border-radius: 999px; padding: 2px 12px; font-size: 12px; color: #1f2430; }
+  .overlay-panel .build-card { border: none; padding: 0; }
+  .overlay-panel table { font-size: 15px; }
+  .overlay-panel .gear-img { width: 84px; height: 84px; flex-basis: 84px; }
+  .overlay-panel .mem-row .img-ph { width: 48px; height: 48px; }
+  .build-card th { width: 92px; }
+  .gear { display: flex; gap: 10px; align-items: center; }
+  .gear-img { width: 56px; height: 56px; flex: 0 0 56px; font-size: 11px; }
+  .mem-grid { display: flex; flex-direction: column; gap: 4px; margin-bottom: 4px; }
+  .mem-row { display: flex; gap: 4px; align-items: center; }
+  .mem-row .img-ph { width: 34px; height: 34px; font-size: 10px; }
+  .mem-label { font-size: 11px; color: #666; width: 28px; flex: 0 0 28px; }
+  .build-card a { text-decoration: none; }
+  .build-card a:hover .img-ph { border-color: #1f4fa3; background: #eef3fc; }
+  .img-ph { background: #eef0f4; border: 1px dashed #c3c9d4; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8a93a5; }
+  .img-main { width: 200px; height: 250px; flex: 0 0 200px; }
+  .skill-name { font-weight: 700; }
+  .sig { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+  .sig-r { background: #d64545; }
+  .sig-y { background: #e3a008; }
+  .sig-b { background: #3b6fd4; }
+  .fold-skill { border-top: 1px solid #e3e6ec; }
+  .fold-skill:last-of-type { border-bottom: 1px solid #e3e6ec; }
+  .fold-skill summary { list-style: none; cursor: pointer; font-size: 15px; font-weight: 700; padding: 8px 2px; }
+  .fold-skill summary::-webkit-details-marker { display: none; }
+  .fold-skill summary::before { content: "▶ "; font-size: 12px; color: #1f4fa3; }
+  .fold-skill[open] summary::before { content: "▼ "; }
+  .row { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 10px; margin: 0 0 6px; }
+  .card { flex: 0 0 calc((100% - 24px) / 4); scroll-snap-align: start; display: block; border: 1px solid #e3e6ec; border-radius: 8px; padding: 10px 6px; text-align: center; text-decoration: none; background: #fff; }
+  .card .img-ph { width: 72px; height: 72px; margin: 0 auto 6px; font-size: 11px; }
+  .card .name { color: #1f4fa3; font-size: 14px; }
+  .ph-note { font-size: 12px; color: #888; }
+  .flavor { font-size: 13px; color: #555; margin: -6px 0 10px; }
+  footer { border-top: 1px solid #e3e6ec; padding: 14px 20px; font-size: 12px; color: #666; text-align: center; }
+  img.img-main { object-fit: cover; }
+  .card img { width: 72px; height: 72px; object-fit: cover; border-radius: 6px; display: block; margin: 0 auto 6px; }
+  .icon-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .icon-item { text-align: center; font-size: 12px; color: #555; }
+  .icon-item img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; display: block; margin: 0 auto 2px; }
+  .icon-img { width: 70px; height: 70px; margin: 0 auto 2px; }
+  @media (max-width: 640px) {
+    .profile-wrap { flex-direction: column; }
+    .img-main { width: 100%; flex: none; height: 200px; }
+    table { font-size: 13px; }
+    th { width: 84px; }
+    .profile-table th { width: 62px; }
+    .build-grid { grid-template-columns: 1fr; }
+    .overlay-panel { margin: 3vh 10px; padding: 12px 12px 14px; }
+    th, td { padding: 6px 7px; }
+    .card { flex-basis: calc((100% - 16px) / 3); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="site-name"><a href="index.html">パニグレ非公式Wiki</a></div>
+  <div class="tagline">非公式です</div>
+</header>
+<div class="layout">
+  <main>
+    <h1>ルシア・紅蓮</h1>
+    <p class="flavor">グレイレイヴンの隊長。常に任務遂行を優先するため感情表現は少し苦手だが、仲間思いで、自己犠牲精神の持ち主。</p>
+    <div class="index">
+      <details class="menu">
+        <summary aria-label="ページ一覧を開く">☰ ページ一覧</summary>
+        <div class="panel">
+          <a href="index.html">トップページ</a>
+          <a href="frames.html">機体一覧</a>
+          <a href="weapons.html">武器一覧</a>
+          <a href="memories.html">意識一覧</a>
+          <a href="cubs.html">補機一覧</a>
+        </div>
+      </details>
+      <div class="idx-links">
+        <div class="idx-row"><span class="idx-label">このページ</span><a href="#build">推奨意識・武器・補機編成</a><a href="#profile">基本情報</a><a href="#skills">スキル</a><a href="#notes">短評・メモ</a></div>
+      </div>
+    </div>
+
+    <h2 id="build">推奨意識・武器・補機編成</h2>
+    <div class="build-grid">
+      <section class="build-card">
+        <div class="build-head"><h3>編成1<span class="build-scene">使う場面：汎用</span></h3><button type="button" class="expand-btn">拡大表示</button></div>
+                <table>
+          <tr><th>意識編成</th><td><div class="mem-grid"><div class="mem-row"><span class="mem-label">上段</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></div><div class="mem-row"><span class="mem-label">下段</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></div></div>（構成：バートン 4点セット＋フリードリヒ 2点セット）</td></tr>
+          <tr><th>意識共鳴</th><td>攻撃+15系 ×6／コアパッシブ ×6</td></tr>
+          <tr><th>武器共振</th><td>コンデリーナ（優先度：低）</td></tr>
+          <tr><th>武器</th><td><div class="gear"><a href="#" aria-label="武器の詳細ページへ"><span class="img-ph gear-img">画像</span></a><span><span class="skill-name">紅蓮狂刃</span><br>刀</span></div></td></tr>
+          <tr><th>武器共鳴</th><td>デッドライン／無窮の栄光／シャイニング</td></tr>
+          <tr><th>補機</th><td><div class="gear"><a href="#" aria-label="補機の詳細ページへ"><span class="img-ph gear-img">画像</span></a><span>（補機名）</span></div></td></tr>
+          <tr><th>アイコン</th><td colspan="3"><div class="icon-row"><span class="icon-item"><img src="images/lucia-lotus-art.png" alt="極アイコン"><span>極アイコン</span></span><span class="icon-item"><img src="images/lucia-lotus-chibi.png" alt="宿舎アイコン"><span>宿舎アイコン</span></span><span class="icon-item"><img src="images/lucia-lotus-icon.png" alt="通常アイコン"><span>通常アイコン</span></span></div></td></tr>
+      </table>
+      </section>
+    </div>
+    <p class="ph-note">※編成情報の更新日時：2025年11月23日</p>
+
+    <h2 id="profile">基本情報</h2>
+    <div class="profile-wrap">
+      <img class="img-main" src="images/lucia-lotus-main.png" alt="ルシア・紅蓮">
+      <table class="profile-table">
+        <tr><th>機体番号</th><td>BPL-01</td><th>初期クラス</th><td>B</td></tr>
+        <tr><th>型式</th><td>攻撃型</td><th>属性</th><td>物理80%／火20%</td></tr>
+        <tr><th>エフェクト</th><td>なし</td><th>武器種</th><td>刀</td></tr>
+        <tr><th>所属部隊</th><td>グレイレイヴン小隊</td><th>CV</th><td>石川由依</td></tr>
+      </table>
+    </div>
+    <h3>関連機体</h3>
+    <p><a href="#">ルシア・黎明</a>／<a href="#">ルシア・鴉羽</a>／<a href="#">ルシア・誓焔</a></p>
+
+    <h2 id="skills">スキル</h2>
+    <p class="ph-note">すべてスキルLv18での表記です。</p>
+    <details class="fold-skill" open>
+      <summary>基本スキル</summary>
+      <table>
+        <tr><th><span class="sig sig-r"></span>赤シグナル</th><td><span class="skill-name">紅蓮 - 初式</span><br>前方を突く。チェイン数に応じて266.72／533.32／800%の物理ダメージ。獲得効果：牽引</td></tr>
+        <tr><th><span class="sig sig-y"></span>黄シグナル</th><td><span class="skill-name">紅蓮 - 閃撃</span><br>目標に素早く1回の攻撃。チェイン数に応じて150／300／450%の物理ダメージ。付与効果：ノックバック</td></tr>
+        <tr><th><span class="sig sig-b"></span>青シグナル</th><td><span class="skill-name">紅蓮 - 波動斬</span><br>武器に爆炎を纏わせる。チェイン数に応じて100／200／300%の物理ダメージ。獲得効果：チェイン数に応じて10／15／20%の火属性ダメージ付与、4／4／6秒持続</td></tr>
+        <tr><th>通常攻撃</th><td><span class="skill-name">紅蓮 - 迅刀</span><br>敵を連続で斬り伏せる。合計540%の物理ダメージ</td></tr>
+      </table>
+    </details>
+    <details class="fold-skill">
+      <summary>特殊スキル</summary>
+      <table>
+        <tr><th>コアパッシブ</th><td><span class="skill-name">紅蓮 - 二刀術</span><br>爆炎モード：3チェイン＋4秒以内の赤ショットで発動。通常攻撃が「二刀術」に置換され、5.5秒持続。二刀術：敵に連続で攻撃を叩き込む。合計1080%の物理ダメージ</td></tr>
+        <tr><th>必殺技</th><td><span class="skill-name">紅蓮乱舞</span><br>必殺技エネルギー100Pt消費。前方の敵に高速の斬撃を与える。一撃につき140%の物理ダメージ、最後の一撃で1000%の物理ダメージ</td></tr>
+        <tr><th>QTE</th><td><span class="skill-name">蓮花斬</span><br>二刀流で敵を攻撃。合計1110%の物理ダメージ</td></tr>
+      </table>
+    </details>
+    <details class="fold-skill">
+      <summary>汎用効果</summary>
+      <table>
+        <tr><th>隊長スキル</th><td><span class="skill-name">勇猛</span><br>攻撃型汎用隊員：攻撃力10%上昇</td></tr>
+        <tr><th>型式スキル</th><td><span class="skill-name">攻撃型</span><br>追加ダメージ効果が20%上昇</td></tr>
+        <tr><th>極・解放</th><td>戦闘開始時、シグナルを3つ獲得</td></tr>
+      </table>
+    </details>
+    <details class="fold-skill">
+      <summary>進化効果</summary>
+      <table>
+        <tr><th>SS追加スキル</th><td><span class="skill-name">閃追斬</span><br>ノックバック中の対象への攻撃で、20%の物理追加ダメージ</td></tr>
+        <tr><th>SSS追加スキル</th><td><span class="skill-name">不死の刃</span><br>コアパッシブ「爆炎モード」：追加ダメージ効果が15%上昇</td></tr>
+        <tr><th>SSS+追加スキル</th><td><span class="skill-name">明鏡止水</span><br>通常攻撃「紅蓮 - 迅刀」：追加ダメージ効果が15%上昇</td></tr>
+      </table>
+    </details>
+    <details class="fold-skill">
+      <summary>躍進</summary>
+      <table>
+        <tr><th>躍進スキル</th><td>（未入力）</td></tr>
+      </table>
+    </details>
+
+    <h2 id="notes">短評・メモ</h2>
+    <p>育成非推奨、推し専。</p>
+    <h3>攻略メモ</h3>
+    <ul>
+      <li>全ての攻撃において回避キャンセルした場合、攻撃は中断される。この場合において利点はない。</li>
+      <li>コアパッシブ中はシグナルを獲得できず、頑強は付与されていない。</li>
+      <li>通常攻撃は敵を貫通せず、同様にシグナルスキルにおいても貫通することはない。</li>
+    </ul>
+
+    <p><a href="frames.html">← 機体一覧に戻る</a></p>
+  </main>
+</div>
+<footer>パニグレ非公式Wiki</footer>
+<div class="overlay" id="build-overlay" hidden>
+  <div class="overlay-backdrop"></div>
+  <div class="overlay-panel" role="dialog" aria-modal="true" aria-label="編成の拡大表示">
+    <button type="button" class="overlay-close">✕ 閉じる</button>
+    <div class="overlay-content"></div>
+  </div>
+</div>
+<script>
+(function () {
+  var overlay = document.getElementById('build-overlay');
+  var content = overlay.querySelector('.overlay-content');
+  function close() { overlay.hidden = true; document.body.style.overflow = ''; content.innerHTML = ''; }
+  overlay.querySelector('.overlay-close').addEventListener('click', close);
+  overlay.querySelector('.overlay-backdrop').addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) close(); });
+  document.querySelectorAll('.expand-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var clone = btn.closest('.build-card').cloneNode(true);
+      var b = clone.querySelector('.build-head .expand-btn');
+      if (b) b.remove();
+      content.innerHTML = '';
+      content.appendChild(clone);
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+})();
+</script>
+</body>
+</html>
