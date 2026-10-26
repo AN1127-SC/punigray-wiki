@@ -54,6 +54,14 @@
   .menu .panel a:hover { background: #eef3fc; }
   .menu .panel a.current { font-weight: 700; background: #eef3fc; }
   @keyframes menu-pop { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+  main h4 { font-size: 14px; margin: 14px 0 4px; color: #333; }
+  .fold { margin: 0 0 10px; }
+  .fold summary { list-style: none; cursor: pointer; display: inline-block; border: 1px solid #d4d9e2; background: #f6f7f9; border-radius: 999px; padding: 2px 14px; font-size: 12px; color: #1f4fa3; }
+  .fold summary::-webkit-details-marker { display: none; }
+  .fold .label-open { display: none; }
+  .fold[open] .label-open { display: inline; }
+  .fold[open] .label-closed { display: none; }
+  main h5 { font-size: 13px; margin: 12px 0 4px; color: #444; }
 </style>
 </head>
 <body>
@@ -84,6 +92,9 @@
     <h2>レアリティ別</h2>
 
     <h3 id="rarity-6">星6意識</h3>
+    <details class="fold" open>
+      <summary><span class="label-closed">▶ 内容を表示</span><span class="label-open">▼ 内容をたたむ</span></summary>
+    <h4 id="rarity-6-general">汎用</h4>
     <div class="row">
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
@@ -91,8 +102,42 @@
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
     </div>
-
+    <h4 id="rarity-6-general-attr">汎用属性</h4>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+    </div>
+    <h4 id="rarity-6-env">環境専用</h4>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+    </div>
+    <h4 id="rarity-6-dedicated">専用</h4>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+    </div>
+    <h4 id="rarity-6-effect">エフェクト</h4>
+    <div class="row">
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+      <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
+    </div>
+    </details>
     <h3 id="rarity-5">星5意識</h3>
+    <details class="fold">
+      <summary><span class="label-closed">▶ 内容を表示</span><span class="label-open">▼ 内容をたたむ</span></summary>
     <div class="row">
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
@@ -100,8 +145,11 @@
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
     </div>
+    </details>
 
     <h3 id="rarity-4">星4意識</h3>
+    <details class="fold">
+      <summary><span class="label-closed">▶ 内容を表示</span><span class="label-open">▼ 内容をたたむ</span></summary>
     <div class="row">
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
@@ -109,8 +157,11 @@
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
     </div>
+    </details>
 
     <h3 id="rarity-3">星3意識</h3>
+    <details class="fold">
+      <summary><span class="label-closed">▶ 内容を表示</span><span class="label-open">▼ 内容をたたむ</span></summary>
     <div class="row">
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
@@ -118,8 +169,11 @@
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
     </div>
+    </details>
 
     <h3 id="rarity-2">星2意識</h3>
+    <details class="fold">
+      <summary><span class="label-closed">▶ 内容を表示</span><span class="label-open">▼ 内容をたたむ</span></summary>
     <div class="row">
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
@@ -127,6 +181,7 @@
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
       <a class="card" href="#"><span class="img-ph">画像</span><span class="name">（意識名）</span></a>
     </div>
+    </details>
   </main>
 </div>
 <footer>パニグレ非公式Wiki</footer>
