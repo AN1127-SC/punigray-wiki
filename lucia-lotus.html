@@ -60,6 +60,8 @@
   .mem-row { display: flex; gap: 4px; align-items: center; }
   .mem-row .img-ph { width: 34px; height: 34px; font-size: 10px; }
   .mem-label { font-size: 11px; color: #666; width: 28px; flex: 0 0 28px; }
+  .mem-slot { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+  .mem-num { font-size: 10px; color: #666; line-height: 1.3; }
   .build-card a { text-decoration: none; }
   .build-card a:hover .img-ph { border-color: #1f4fa3; background: #eef3fc; }
   .img-ph { background: #eef0f4; border: 1px dashed #c3c9d4; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8a93a5; }
@@ -131,7 +133,7 @@
       <section class="build-card">
         <div class="build-head"><h3>編成1<span class="build-scene">使う場面：汎用</span></h3><button type="button" class="expand-btn">拡大表示</button></div>
                 <table>
-          <tr><th>意識編成</th><td><div class="mem-grid"><div class="mem-row"><span class="mem-label">上段</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></div><div class="mem-row"><span class="mem-label">下段</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></div></div>（構成：バートン 4点セット＋フリードリヒ 2点セット）</td></tr>
+          <tr><th>意識編成</th><td><div class="mem-grid"><div class="mem-row"><span class="mem-label">上段</span><span class="mem-slot"><span class="mem-num">01</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></span><span class="mem-slot"><span class="mem-num">02</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></span><span class="mem-slot"><span class="mem-num">03</span><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a></span></div><div class="mem-row"><span class="mem-label">下段</span><span class="mem-slot"><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><span class="mem-num">04</span></span><span class="mem-slot"><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><span class="mem-num">05</span></span><span class="mem-slot"><a href="#" aria-label="意識の詳細ページへ"><span class="img-ph">画像</span></a><span class="mem-num">06</span></span></div></div>（構成：バートン 4点セット＋フリードリヒ 2点セット）</td></tr>
           <tr><th>意識共鳴</th><td>攻撃+15系 ×6／コアパッシブ ×6</td></tr>
           <tr><th>武器共振</th><td>コンデリーナ（優先度：低）</td></tr>
           <tr><th>武器</th><td><div class="gear"><a href="#" aria-label="武器の詳細ページへ"><span class="img-ph gear-img">画像</span></a><span><span class="skill-name">紅蓮狂刃</span><br>刀</span></div></td></tr>
