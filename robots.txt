@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://an1127-sc.github.io/punigray-wiki/sitemap.xml
